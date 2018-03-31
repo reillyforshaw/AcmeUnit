@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9EFF1AE4206F47C00073F8E9 /* AcmeUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFF1ADA206F47C00073F8E9 /* AcmeUnit.framework */; };
-		9EFF1AE9206F47C00073F8E9 /* AcmeUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF1AE8206F47C00073F8E9 /* AcmeUnitTests.swift */; };
 		9EFF1AEB206F47C00073F8E9 /* AcmeUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EFF1ADD206F47C00073F8E9 /* AcmeUnit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9EFF1AF5206F47EF0073F8E9 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF1AF4206F47EF0073F8E9 /* Unit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +27,8 @@
 		9EFF1ADD206F47C00073F8E9 /* AcmeUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AcmeUnit.h; sourceTree = "<group>"; };
 		9EFF1ADE206F47C00073F8E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EFF1AE3206F47C00073F8E9 /* AcmeUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcmeUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9EFF1AE8206F47C00073F8E9 /* AcmeUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcmeUnitTests.swift; sourceTree = "<group>"; };
 		9EFF1AEA206F47C00073F8E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EFF1AF4206F47EF0073F8E9 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +73,7 @@
 			children = (
 				9EFF1ADD206F47C00073F8E9 /* AcmeUnit.h */,
 				9EFF1ADE206F47C00073F8E9 /* Info.plist */,
+				9EFF1AF4206F47EF0073F8E9 /* Unit.swift */,
 			);
 			path = AcmeUnit;
 			sourceTree = "<group>";
@@ -80,7 +81,6 @@
 		9EFF1AE7206F47C00073F8E9 /* AcmeUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				9EFF1AE8206F47C00073F8E9 /* AcmeUnitTests.swift */,
 				9EFF1AEA206F47C00073F8E9 /* Info.plist */,
 			);
 			path = AcmeUnitTests;
@@ -148,6 +148,7 @@
 				TargetAttributes = {
 					9EFF1AD9206F47C00073F8E9 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					9EFF1AE2206F47C00073F8E9 = {
@@ -196,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EFF1AF5206F47EF0073F8E9 /* Unit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +205,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EFF1AE9206F47C00073F8E9 /* AcmeUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +335,7 @@
 		9EFF1AEF206F47C00073F8E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -344,8 +346,10 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rforshaw.AcmeUnit;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -354,6 +358,7 @@
 		9EFF1AF0206F47C00073F8E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -364,6 +369,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rforshaw.AcmeUnit;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -374,6 +380,7 @@
 		9EFF1AF2206F47C00073F8E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AcmeUnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -387,6 +394,7 @@
 		9EFF1AF3206F47C00073F8E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AcmeUnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
